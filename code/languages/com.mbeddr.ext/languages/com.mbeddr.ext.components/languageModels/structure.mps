@@ -1126,6 +1126,14 @@
     <node role="extends" roleId="tpce.1169127546356" type="tpce.InterfaceConceptReference" typeId="tpce.1169127622168" id="6970948587881394019" nodeInfo="ig">
       <link role="intfc" roleId="tpce.1169127628841" targetNodeId="2gv2.8811944678849085924" resolveInfo="IBreakpointSupport" />
     </node>
+    <node role="propertyDeclaration" roleId="tpce.1071489727084" type="tpce.PropertyDeclaration" typeId="tpce.1071489288299" id="3305374663749066309" nodeInfo="ig">
+      <property name="name" nameId="tpck.1169194664001" value="x" />
+      <link role="dataType" roleId="tpce.1082985295845" targetNodeId="tpck.1082983657062" resolveInfo="integer" />
+    </node>
+    <node role="propertyDeclaration" roleId="tpce.1071489727084" type="tpce.PropertyDeclaration" typeId="tpce.1071489288299" id="3305374663749068486" nodeInfo="ig">
+      <property name="name" nameId="tpck.1169194664001" value="y" />
+      <link role="dataType" roleId="tpce.1082985295845" targetNodeId="tpck.1082983657062" resolveInfo="integer" />
+    </node>
   </root>
   <root type="tpce.ConceptDeclaration" typeId="tpce.1071489090640" id="1089269900847289701" nodeInfo="ig">
     <property name="virtualPackage" nameId="tpck.1193676396447" value="comp.instances" />

@@ -167,10 +167,14 @@
       <property name="exported" nameId="x27k.1317894735999272944" value="true" />
       <node role="contents" roleId="v7ag.7780999115923944213" type="v7ag.ComponentInstance" typeId="v7ag.4491876417845649014" id="8132151755547402528" nodeInfo="ng">
         <property name="name" nameId="tpck.1169194664001" value="a" />
+        <property name="y" nameId="v7ag.3305374663749068486" value="206" />
+        <property name="x" nameId="v7ag.3305374663749066309" value="65" />
         <link role="component" roleId="v7ag.4491876417845649015" targetNodeId="8132151755547402517" resolveInfo="A" />
       </node>
       <node role="contents" roleId="v7ag.7780999115923944213" type="v7ag.ComponentInstance" typeId="v7ag.4491876417845649014" id="8132151755547402543" nodeInfo="ng">
         <property name="name" nameId="tpck.1169194664001" value="b" />
+        <property name="x" nameId="v7ag.3305374663749066309" value="282" />
+        <property name="y" nameId="v7ag.3305374663749068486" value="108" />
         <link role="component" roleId="v7ag.4491876417845649015" targetNodeId="8132151755547402520" resolveInfo="B" />
       </node>
       <node role="contents" roleId="v7ag.7780999115923944213" type="v7ag.AssemblyConnector" typeId="v7ag.4491876417845649016" id="8132151755547402544" nodeInfo="ng">
@@ -184,8 +188,9 @@
         </node>
       </node>
     </node>
-    <node role="imports" roleId="x27k.1317894735999304826" type="x27k.ModuleImport" typeId="x27k.1317894735999299713" id="8132151755547402542" nodeInfo="ng">
-      <link role="module" roleId="x27k.1317894735999299714" targetNodeId="8132151755547402516" resolveInfo="components" />
+    <node role="imports" roleId="x27k.1317894735999304826" type="vs0r.DefaultGenericChunkDependency" typeId="vs0r.747084250476811597" id="3305374663753174108" nodeInfo="ng">
+      <property name="reexport" nameId="vs0r.747084250476874891" value="false" />
+      <link role="chunk" roleId="vs0r.747084250476878887" targetNodeId="8132151755547402516" resolveInfo="components" />
     </node>
   </root>
   <root type="x27k.ImplementationModule" typeId="x27k.6437088627575722830" id="8132151755547402749" nodeInfo="ng">

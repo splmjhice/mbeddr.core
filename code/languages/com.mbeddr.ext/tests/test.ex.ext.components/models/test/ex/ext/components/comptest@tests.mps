@@ -449,26 +449,38 @@
       <property name="name" nameId="tpck.1169194664001" value="defaultInstances" />
       <node role="contents" roleId="v7ag.7780999115923944213" type="v7ag.ComponentInstance" typeId="v7ag.4491876417845649014" id="9146329806094299637" nodeInfo="ng">
         <property name="name" nameId="tpck.1169194664001" value="lights" />
+        <property name="x" nameId="v7ag.3305374663749066309" value="386" />
+        <property name="y" nameId="v7ag.3305374663749068486" value="94" />
         <link role="component" roleId="v7ag.4491876417845649015" targetNodeId="8105003328814702535" resolveInfo="TrafficLights" />
       </node>
       <node role="contents" roleId="v7ag.7780999115923944213" type="v7ag.ComponentInstance" typeId="v7ag.4491876417845649014" id="591155063063651674" nodeInfo="ng">
         <property name="name" nameId="tpck.1169194664001" value="lights2" />
+        <property name="x" nameId="v7ag.3305374663749066309" value="408" />
+        <property name="y" nameId="v7ag.3305374663749068486" value="352" />
         <link role="component" roleId="v7ag.4491876417845649015" targetNodeId="8105003328814702535" resolveInfo="TrafficLights" />
       </node>
       <node role="contents" roleId="v7ag.7780999115923944213" type="v7ag.ComponentInstance" typeId="v7ag.4491876417845649014" id="8922663937488698561" nodeInfo="ng">
         <property name="name" nameId="tpck.1169194664001" value="ll" />
+        <property name="x" nameId="v7ag.3305374663749066309" value="132" />
+        <property name="y" nameId="v7ag.3305374663749068486" value="225" />
         <link role="component" roleId="v7ag.4491876417845649015" targetNodeId="8922663937488690190" resolveInfo="LowLevelCode" />
       </node>
       <node role="contents" roleId="v7ag.7780999115923944213" type="v7ag.ComponentInstance" typeId="v7ag.4491876417845649014" id="8105003328815233154" nodeInfo="ng">
         <property name="name" nameId="tpck.1169194664001" value="driver" />
+        <property name="y" nameId="v7ag.3305374663749068486" value="45" />
+        <property name="x" nameId="v7ag.3305374663749066309" value="222" />
         <link role="component" roleId="v7ag.4491876417845649015" targetNodeId="8105003328815233156" resolveInfo="Driver" />
       </node>
       <node role="contents" roleId="v7ag.7780999115923944213" type="v7ag.ComponentInstance" typeId="v7ag.4491876417845649014" id="591155063063651673" nodeInfo="ng">
         <property name="name" nameId="tpck.1169194664001" value="driver2" />
+        <property name="y" nameId="v7ag.3305374663749068486" value="273" />
+        <property name="x" nameId="v7ag.3305374663749066309" value="309" />
         <link role="component" roleId="v7ag.4491876417845649015" targetNodeId="9146329806094299625" resolveInfo="AnotherDriver" />
       </node>
       <node role="contents" roleId="v7ag.7780999115923944213" type="v7ag.ComponentInstance" typeId="v7ag.4491876417845649014" id="7265387141425485030" nodeInfo="ng">
         <property name="name" nameId="tpck.1169194664001" value="logger" />
+        <property name="y" nameId="v7ag.3305374663749068486" value="342" />
+        <property name="x" nameId="v7ag.3305374663749066309" value="73" />
         <link role="component" roleId="v7ag.4491876417845649015" targetNodeId="7265387141425485014" resolveInfo="Logger" />
       </node>
       <node role="contents" roleId="v7ag.7780999115923944213" type="v7ag.EmptyInstanceConfigContent" typeId="v7ag.1089269900847289701" id="4429602430542714238" nodeInfo="ng" />
@@ -525,6 +537,8 @@
       <node role="contents" roleId="v7ag.7780999115923944213" type="v7ag.EmptyInstanceConfigContent" typeId="v7ag.1089269900847289701" id="5413996595771867965" nodeInfo="ng" />
       <node role="contents" roleId="v7ag.7780999115923944213" type="v7ag.PortAdapter" typeId="v7ag.5172178961828157634" id="5413996595771867967" nodeInfo="ng">
         <property name="name" nameId="tpck.1169194664001" value="t1" />
+        <property name="y" nameId="v7ag.3305374663749068486" value="131" />
+        <property name="x" nameId="v7ag.3305374663749066309" value="111" />
         <node role="portRef" roleId="v7ag.6616025724454701213" type="v7ag.AdapterInstancePortRef" typeId="v7ag.6616025724454668918" id="5413996595771867968" nodeInfo="ng">
           <link role="port" roleId="v7ag.6616025724454668920" targetNodeId="8105003328814646287" resolveInfo="tl" />
           <link role="instance" roleId="v7ag.6616025724454668919" targetNodeId="9146329806094299637" resolveInfo="lights" />
@@ -532,6 +546,8 @@
       </node>
       <node role="contents" roleId="v7ag.7780999115923944213" type="v7ag.PortAdapter" typeId="v7ag.5172178961828157634" id="5413996595771867970" nodeInfo="ng">
         <property name="name" nameId="tpck.1169194664001" value="t2" />
+        <property name="y" nameId="v7ag.3305374663749068486" value="48" />
+        <property name="x" nameId="v7ag.3305374663749066309" value="116" />
         <node role="portRef" roleId="v7ag.6616025724454701213" type="v7ag.AdapterInstancePortRef" typeId="v7ag.6616025724454668918" id="5413996595771867971" nodeInfo="ng">
           <link role="port" roleId="v7ag.6616025724454668920" targetNodeId="8105003328814646287" resolveInfo="tl" />
           <link role="instance" roleId="v7ag.6616025724454668919" targetNodeId="591155063063651674" resolveInfo="lights2" />
@@ -539,6 +555,8 @@
       </node>
       <node role="contents" roleId="v7ag.7780999115923944213" type="v7ag.PortAdapter" typeId="v7ag.5172178961828157634" id="5413996595771867973" nodeInfo="ng">
         <property name="name" nameId="tpck.1169194664001" value="diag" />
+        <property name="y" nameId="v7ag.3305374663749068486" value="98" />
+        <property name="x" nameId="v7ag.3305374663749066309" value="118" />
         <node role="portRef" roleId="v7ag.6616025724454701213" type="v7ag.AdapterInstancePortRef" typeId="v7ag.6616025724454668918" id="5413996595771867974" nodeInfo="ng">
           <link role="instance" roleId="v7ag.6616025724454668919" targetNodeId="591155063063651673" resolveInfo="driver2" />
           <link role="port" roleId="v7ag.6616025724454668920" targetNodeId="5308710777891623520" resolveInfo="diag" />
@@ -629,8 +647,9 @@
         <property name="const" nameId="mj1l.2941277002445651368" value="false" />
       </node>
     </node>
-    <node role="imports" roleId="x27k.1317894735999304826" type="x27k.ModuleImport" typeId="x27k.1317894735999299713" id="8105003328815229429" nodeInfo="ng">
-      <link role="module" roleId="x27k.1317894735999299714" targetNodeId="8105003328814646285" resolveInfo="CompModule" />
+    <node role="imports" roleId="x27k.1317894735999304826" type="vs0r.DefaultGenericChunkDependency" typeId="vs0r.747084250476811597" id="3305374663753211480" nodeInfo="ng">
+      <property name="reexport" nameId="vs0r.747084250476874891" value="false" />
+      <link role="chunk" roleId="vs0r.747084250476878887" targetNodeId="8105003328814646285" resolveInfo="CompModule" />
     </node>
   </root>
   <root type="mj1l.TypeSizeConfiguration" typeId="mj1l.3335993110369795380" id="7496733358578266352" nodeInfo="ng">
