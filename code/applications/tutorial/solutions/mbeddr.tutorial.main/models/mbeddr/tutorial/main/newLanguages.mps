@@ -2331,10 +2331,25 @@
     <node role="assessments" roleId="vs0r.865293814733114045" type="vs0r.Assessment" typeId="vs0r.865293814733114044" id="806361095884549815" nodeInfo="ng">
       <property name="name" nameId="tpck.1169194664001" value="externalReqsStillValid" />
       <property name="mustBeOk" nameId="vs0r.3815661793603523593" value="true" />
+      <property name="lastUpdatedOn" nameId="vs0r.4423545983997782838" value="1397034155816" />
+      <property name="lastUdpatedBy" nameId="vs0r.4423545983997787056" value="markusvoelter" />
+      <node role="results" roleId="vs0r.865293814733118687" type="vs0r.AssessmentResultEntry" typeId="vs0r.865293814733118686" id="4423545984004094954" nodeInfo="ng">
+        <property name="status" nameId="vs0r.8389796016067541249" value="1" />
+        <property name="lastFound" nameId="vs0r.6619757161337247129" value="1397034155812" />
+        <node role="comment" roleId="vs0r.6619757161337461931" type="vs0r.TextBlock" typeId="vs0r.8375407818529178006" id="4423545984004094955" nodeInfo="ng">
+          <node role="text" roleId="vs0r.8375407818529178007" type="87nw.Text" typeId="87nw.2557074442922380897" id="4423545984004094956" nodeInfo="ng">
+            <node role="words" roleId="87nw.2557074442922392302" type="87nw.Word" typeId="87nw.2557074442922438156" id="4423545984004094957" nodeInfo="ng" />
+          </node>
+        </node>
+        <node role="result" roleId="vs0r.865293814733133843" type="vs0r.CheckHashAssessmentResult" typeId="vs0r.806361095877986078" id="4423545984004094953" nodeInfo="ng">
+          <property name="kind" nameId="vs0r.806361095878057905" value="outdatedHash" />
+          <link role="exref" roleId="vs0r.806361095877994774" targetNodeId="2656703252205190787" />
+        </node>
+      </node>
       <node role="query" roleId="vs0r.865293814733115677" type="vs0r.CheckHashAssessmentQuery" typeId="vs0r.806361095877923648" id="806361095884549819" nodeInfo="ng" />
-      <node role="summaries" roleId="vs0r.671216505796427450" type="vs0r.DefaultAssessmentSummary" typeId="vs0r.671216505796623802" id="2656703252205496295" nodeInfo="ng">
-        <property name="totalCount" nameId="vs0r.671216505796623805" value="0" />
-        <property name="newlyAdded" nameId="vs0r.671216505796623807" value="0" />
+      <node role="summaries" roleId="vs0r.671216505796427450" type="vs0r.DefaultAssessmentSummary" typeId="vs0r.671216505796623802" id="4423545984004094958" nodeInfo="ng">
+        <property name="totalCount" nameId="vs0r.671216505796623805" value="1" />
+        <property name="newlyAdded" nameId="vs0r.671216505796623807" value="1" />
         <property name="ok" nameId="vs0r.671216505796623806" value="0" />
       </node>
     </node>
