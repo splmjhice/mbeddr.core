@@ -258,6 +258,9 @@
   	  <antcall target="clean-languages" />
 	  <antcall target="clean-tests" />
 	  <antcall target="clean-tutorial" />
+	  <delete includeemptydirs="true">
+	  	<fileset dir="." includes="**/source_gen/,**/source_gen.caches/,**/classes_gen/" defaultexcludes="false"/>
+	  </delete>
   </target>	
   
   <target name="clean-tutorial">
