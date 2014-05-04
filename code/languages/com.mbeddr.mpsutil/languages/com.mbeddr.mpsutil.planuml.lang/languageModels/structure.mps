@@ -220,5 +220,53 @@
     <property name="virtualPackage" nameId="tpck.1193676396447" value="transition.toparrows" />
     <link role="extends" roleId="tpce.1071489389519" targetNodeId="5923081993706050535" resolveInfo="Transition" />
   </root>
+  <root type="tpce.ConceptDeclaration" typeId="tpce.1071489090640" id="5923081993706260520" nodeInfo="ig">
+    <property name="name" nameId="tpck.1169194664001" value="ButtomArrowLeft" />
+    <property name="conceptAlias" nameId="tpce.5092175715804935370" value="\-" />
+    <property name="virtualPackage" nameId="tpck.1193676396447" value="transition.buttomarrows" />
+    <link role="extends" roleId="tpce.1071489389519" targetNodeId="5923081993706050535" resolveInfo="Transition" />
+  </root>
+  <root type="tpce.ConceptDeclaration" typeId="tpce.1071489090640" id="5923081993706260601" nodeInfo="ig">
+    <property name="name" nameId="tpck.1169194664001" value="ButtomArrowRight" />
+    <property name="conceptAlias" nameId="tpce.5092175715804935370" value="-\" />
+    <property name="virtualPackage" nameId="tpck.1193676396447" value="transition.buttomarrows" />
+    <link role="extends" roleId="tpce.1071489389519" targetNodeId="5923081993706050535" resolveInfo="Transition" />
+  </root>
+  <root type="tpce.ConceptDeclaration" typeId="tpce.1071489090640" id="5923081993706260602" nodeInfo="ig">
+    <property name="name" nameId="tpck.1169194664001" value="ButtomDottedArrowLeft" />
+    <property name="conceptAlias" nameId="tpce.5092175715804935370" value="\--" />
+    <property name="virtualPackage" nameId="tpck.1193676396447" value="transition.buttomarrows" />
+    <link role="extends" roleId="tpce.1071489389519" targetNodeId="5923081993706050535" resolveInfo="Transition" />
+  </root>
+  <root type="tpce.ConceptDeclaration" typeId="tpce.1071489090640" id="5923081993706260603" nodeInfo="ig">
+    <property name="name" nameId="tpck.1169194664001" value="ButtomDottedArrowRight" />
+    <property name="conceptAlias" nameId="tpce.5092175715804935370" value="--\" />
+    <property name="virtualPackage" nameId="tpck.1193676396447" value="transition.buttomarrows" />
+    <link role="extends" roleId="tpce.1071489389519" targetNodeId="5923081993706050535" resolveInfo="Transition" />
+  </root>
+  <root type="tpce.ConceptDeclaration" typeId="tpce.1071489090640" id="5923081993706260604" nodeInfo="ig">
+    <property name="name" nameId="tpck.1169194664001" value="ButtomThinArrowLeft" />
+    <property name="conceptAlias" nameId="tpce.5092175715804935370" value="\\-" />
+    <property name="virtualPackage" nameId="tpck.1193676396447" value="transition.buttomarrows" />
+    <link role="extends" roleId="tpce.1071489389519" targetNodeId="5923081993706050535" resolveInfo="Transition" />
+  </root>
+  <root type="tpce.ConceptDeclaration" typeId="tpce.1071489090640" id="5923081993706260605" nodeInfo="ig">
+    <property name="name" nameId="tpck.1169194664001" value="ButtomThinArrowRight" />
+    <property name="conceptAlias" nameId="tpce.5092175715804935370" value="-\\" />
+    <property name="virtualPackage" nameId="tpck.1193676396447" value="transition.buttomarrows" />
+    <link role="extends" roleId="tpce.1071489389519" targetNodeId="5923081993706050535" resolveInfo="Transition" />
+  </root>
+  <root type="tpce.ConceptDeclaration" typeId="tpce.1071489090640" id="5923081993706260606" nodeInfo="ig">
+    <property name="name" nameId="tpck.1169194664001" value="ButtomThinDottedArrowLeft" />
+    <property name="conceptAlias" nameId="tpce.5092175715804935370" value="\\--" />
+    <property name="virtualPackage" nameId="tpck.1193676396447" value="transition.buttomarrows" />
+    <link role="extends" roleId="tpce.1071489389519" targetNodeId="5923081993706050535" resolveInfo="Transition" />
+  </root>
+  <root type="tpce.ConceptDeclaration" typeId="tpce.1071489090640" id="5923081993706260607" nodeInfo="ig">
+    <property name="name" nameId="tpck.1169194664001" value="ButtomThinDottedArrowRight" />
+    <property name="conceptAlias" nameId="tpce.5092175715804935370" value="--\\" />
+    <property name="virtualPackage" nameId="tpck.1193676396447" value="transition.buttomarrows" />
+    <link role="extends" roleId="tpce.1071489389519" targetNodeId="5923081993706050535" resolveInfo="Transition" />
+  </root>
 </model>
 
