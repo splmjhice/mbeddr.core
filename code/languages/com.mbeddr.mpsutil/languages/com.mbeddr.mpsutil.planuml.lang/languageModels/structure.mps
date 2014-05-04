@@ -292,5 +292,9 @@
       <link role="target" roleId="tpce.1071599976176" targetNodeId="5049397430599272434" resolveInfo="PlantUMLBaseConcept" />
     </node>
   </root>
+  <root type="tpce.ConceptDeclaration" typeId="tpce.1071489090640" id="5923081993706747613" nodeInfo="ig">
+    <property name="name" nameId="tpck.1169194664001" value="EmptyDiagramContent" />
+    <link role="extends" roleId="tpce.1071489389519" targetNodeId="5049397430599272434" resolveInfo="PlantUMLBaseConcept" />
+  </root>
 </model>
 
