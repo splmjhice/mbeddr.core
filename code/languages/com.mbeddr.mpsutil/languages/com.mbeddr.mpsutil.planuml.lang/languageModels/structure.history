@@ -6,5 +6,23 @@
     </dependencies>
     <rename id="jtwg.5049397430599272434" type="CONCEPT" from="PlantUMLVBaseConcept" to="PlantUMLBaseConcept" />
   </StructureModification>
+  <StructureModification>
+    <dependencies>
+      <model index="jtwg" modelUID="r:fa2203ef-3a22-41de-a7d2-fe30d5256021(com.mbeddr.mpsutil.planuml.lang.structure)" version="0" />
+    </dependencies>
+    <rename id="jtwg.5923081993706050534" type="CONCEPT" from="LightArrow" to="ThinArrow" />
+  </StructureModification>
+  <StructureModification>
+    <dependencies>
+      <model index="jtwg" modelUID="r:fa2203ef-3a22-41de-a7d2-fe30d5256021(com.mbeddr.mpsutil.planuml.lang.structure)" version="1" />
+    </dependencies>
+    <rename id="jtwg.5923081993706050501" type="CONCEPT" from="NormalArrow" to="NormalArrowRight" />
+  </StructureModification>
+  <StructureModification>
+    <dependencies>
+      <model index="jtwg" modelUID="r:fa2203ef-3a22-41de-a7d2-fe30d5256021(com.mbeddr.mpsutil.planuml.lang.structure)" version="2" />
+    </dependencies>
+    <rename id="jtwg.5923081993706252963" type="CONCEPT" from="NormalArrowLeft" to="TopArrowLeft" />
+  </StructureModification>
 </history>
 

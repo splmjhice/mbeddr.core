@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<model modelUID="r:fa2203ef-3a22-41de-a7d2-fe30d5256021(com.mbeddr.mpsutil.planuml.lang.structure)" version="0">
+<model modelUID="r:fa2203ef-3a22-41de-a7d2-fe30d5256021(com.mbeddr.mpsutil.planuml.lang.structure)" version="3">
   <persistence version="8" />
   <language namespace="c72da2b9-7cce-4447-8389-f407dc1158b7(jetbrains.mps.lang.structure)" />
   <devkit namespace="fbc25dd2-5da4-483a-8b19-70928e1b62d7(jetbrains.mps.devkit.general-purpose)" />
   <import index="tpce" modelUID="r:00000000-0000-4000-0000-011c89590292(jetbrains.mps.lang.structure.structure)" version="0" implicit="yes" />
   <import index="tpck" modelUID="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" version="0" implicit="yes" />
-  <import index="jtwg" modelUID="r:fa2203ef-3a22-41de-a7d2-fe30d5256021(com.mbeddr.mpsutil.planuml.lang.structure)" version="0" implicit="yes" />
+  <import index="jtwg" modelUID="r:fa2203ef-3a22-41de-a7d2-fe30d5256021(com.mbeddr.mpsutil.planuml.lang.structure)" version="3" implicit="yes" />
   <root type="tpce.ConceptDeclaration" typeId="tpce.1071489090640" id="5049397430599272381" nodeInfo="ig">
     <property name="name" nameId="tpck.1169194664001" value="Actor" />
     <property name="conceptAlias" nameId="tpce.5092175715804935370" value="actor" />
@@ -88,18 +88,21 @@
     <link role="extends" roleId="tpce.1071489389519" targetNodeId="5049397430599272434" resolveInfo="PlantUMLBaseConcept" />
   </root>
   <root type="tpce.ConceptDeclaration" typeId="tpce.1071489090640" id="5923081993706050501" nodeInfo="ig">
-    <property name="name" nameId="tpck.1169194664001" value="NormalArrow" />
+    <property name="name" nameId="tpck.1169194664001" value="NormalArrowRight" />
     <property name="conceptAlias" nameId="tpce.5092175715804935370" value="-&gt;" />
+    <property name="virtualPackage" nameId="tpck.1193676396447" value="transition.arrows" />
     <link role="extends" roleId="tpce.1071489389519" targetNodeId="5923081993706050535" resolveInfo="Transition" />
   </root>
   <root type="tpce.ConceptDeclaration" typeId="tpce.1071489090640" id="5923081993706050534" nodeInfo="ig">
-    <property name="name" nameId="tpck.1169194664001" value="LightArrow" />
+    <property name="name" nameId="tpck.1169194664001" value="ThinArrowRight" />
     <property name="conceptAlias" nameId="tpce.5092175715804935370" value="-&gt;&gt;" />
+    <property name="virtualPackage" nameId="tpck.1193676396447" value="transition.arrows" />
     <link role="extends" roleId="tpce.1071489389519" targetNodeId="5923081993706050535" resolveInfo="Transition" />
   </root>
   <root type="tpce.ConceptDeclaration" typeId="tpce.1071489090640" id="5923081993706050535" nodeInfo="ig">
     <property name="abstract" nameId="tpce.4628067390765956802" value="true" />
     <property name="name" nameId="tpck.1169194664001" value="Transition" />
+    <property name="virtualPackage" nameId="tpck.1193676396447" value="transition" />
     <link role="extends" roleId="tpce.1071489389519" targetNodeId="5049397430599272434" resolveInfo="PlantUMLBaseConcept" />
     <node role="linkDeclaration" roleId="tpce.1071489727083" type="tpce.LinkDeclaration" typeId="tpce.1071489288298" id="5923081993706246285" nodeInfo="ig">
       <property name="metaClass" nameId="tpce.1071599937831" value="aggregation" />
@@ -132,6 +135,90 @@
       <property name="sourceCardinality" nameId="tpce.1071599893252" value="1" />
       <link role="target" roleId="tpce.1071599976176" targetNodeId="5923081993706050538" resolveInfo="Participant" />
     </node>
+  </root>
+  <root type="tpce.ConceptDeclaration" typeId="tpce.1071489090640" id="5923081993706252912" nodeInfo="ig">
+    <property name="name" nameId="tpck.1169194664001" value="NormalDottedArrowLeft" />
+    <property name="conceptAlias" nameId="tpce.5092175715804935370" value="&lt;--" />
+    <property name="virtualPackage" nameId="tpck.1193676396447" value="transition.arrows" />
+    <link role="extends" roleId="tpce.1071489389519" targetNodeId="5923081993706050535" resolveInfo="Transition" />
+  </root>
+  <root type="tpce.ConceptDeclaration" typeId="tpce.1071489090640" id="5923081993706252913" nodeInfo="ig">
+    <property name="name" nameId="tpck.1169194664001" value="ThinDottedArrowLeft" />
+    <property name="conceptAlias" nameId="tpce.5092175715804935370" value="&lt;&lt;--" />
+    <property name="virtualPackage" nameId="tpck.1193676396447" value="transition.arrows" />
+    <link role="extends" roleId="tpce.1071489389519" targetNodeId="5923081993706050535" resolveInfo="Transition" />
+  </root>
+  <root type="tpce.ConceptDeclaration" typeId="tpce.1071489090640" id="5923081993706252959" nodeInfo="ig">
+    <property name="name" nameId="tpck.1169194664001" value="ThinArrowLeft" />
+    <property name="conceptAlias" nameId="tpce.5092175715804935370" value="&lt;&lt;-" />
+    <property name="virtualPackage" nameId="tpck.1193676396447" value="transition.arrows" />
+    <link role="extends" roleId="tpce.1071489389519" targetNodeId="5923081993706050535" resolveInfo="Transition" />
+  </root>
+  <root type="tpce.ConceptDeclaration" typeId="tpce.1071489090640" id="5923081993706252960" nodeInfo="ig">
+    <property name="name" nameId="tpck.1169194664001" value="ThinDottedArrowRight" />
+    <property name="conceptAlias" nameId="tpce.5092175715804935370" value="--&gt;&gt;" />
+    <property name="virtualPackage" nameId="tpck.1193676396447" value="transition.arrows" />
+    <link role="extends" roleId="tpce.1071489389519" targetNodeId="5923081993706050535" resolveInfo="Transition" />
+  </root>
+  <root type="tpce.ConceptDeclaration" typeId="tpce.1071489090640" id="5923081993706252961" nodeInfo="ig">
+    <property name="name" nameId="tpck.1169194664001" value="NormalArrowLeft" />
+    <property name="conceptAlias" nameId="tpce.5092175715804935370" value="&lt;-" />
+    <property name="virtualPackage" nameId="tpck.1193676396447" value="transition.arrows" />
+    <link role="extends" roleId="tpce.1071489389519" targetNodeId="5923081993706050535" resolveInfo="Transition" />
+  </root>
+  <root type="tpce.ConceptDeclaration" typeId="tpce.1071489090640" id="5923081993706252962" nodeInfo="ig">
+    <property name="name" nameId="tpck.1169194664001" value="NormalDottedArrowRight" />
+    <property name="conceptAlias" nameId="tpce.5092175715804935370" value="--&gt;" />
+    <property name="virtualPackage" nameId="tpck.1193676396447" value="transition.arrows" />
+    <link role="extends" roleId="tpce.1071489389519" targetNodeId="5923081993706050535" resolveInfo="Transition" />
+  </root>
+  <root type="tpce.ConceptDeclaration" typeId="tpce.1071489090640" id="5923081993706252963" nodeInfo="ig">
+    <property name="name" nameId="tpck.1169194664001" value="TopArrowLeft" />
+    <property name="conceptAlias" nameId="tpce.5092175715804935370" value="/-" />
+    <property name="virtualPackage" nameId="tpck.1193676396447" value="transition.toparrows" />
+    <link role="extends" roleId="tpce.1071489389519" targetNodeId="5923081993706050535" resolveInfo="Transition" />
+  </root>
+  <root type="tpce.ConceptDeclaration" typeId="tpce.1071489090640" id="5923081993706260385" nodeInfo="ig">
+    <property name="name" nameId="tpck.1169194664001" value="TopArrowRight" />
+    <property name="conceptAlias" nameId="tpce.5092175715804935370" value="-/" />
+    <property name="virtualPackage" nameId="tpck.1193676396447" value="transition.toparrows" />
+    <link role="extends" roleId="tpce.1071489389519" targetNodeId="5923081993706050535" resolveInfo="Transition" />
+  </root>
+  <root type="tpce.ConceptDeclaration" typeId="tpce.1071489090640" id="5923081993706260386" nodeInfo="ig">
+    <property name="name" nameId="tpck.1169194664001" value="TopDottedArrowLeft" />
+    <property name="conceptAlias" nameId="tpce.5092175715804935370" value="/--" />
+    <property name="virtualPackage" nameId="tpck.1193676396447" value="transition.toparrows" />
+    <link role="extends" roleId="tpce.1071489389519" targetNodeId="5923081993706050535" resolveInfo="Transition" />
+  </root>
+  <root type="tpce.ConceptDeclaration" typeId="tpce.1071489090640" id="5923081993706260387" nodeInfo="ig">
+    <property name="name" nameId="tpck.1169194664001" value="TopDottedArrowRight" />
+    <property name="conceptAlias" nameId="tpce.5092175715804935370" value="--/" />
+    <property name="virtualPackage" nameId="tpck.1193676396447" value="transition.toparrows" />
+    <link role="extends" roleId="tpce.1071489389519" targetNodeId="5923081993706050535" resolveInfo="Transition" />
+  </root>
+  <root type="tpce.ConceptDeclaration" typeId="tpce.1071489090640" id="5923081993706260388" nodeInfo="ig">
+    <property name="name" nameId="tpck.1169194664001" value="TopThinArrowLeft" />
+    <property name="conceptAlias" nameId="tpce.5092175715804935370" value="//-" />
+    <property name="virtualPackage" nameId="tpck.1193676396447" value="transition.toparrows" />
+    <link role="extends" roleId="tpce.1071489389519" targetNodeId="5923081993706050535" resolveInfo="Transition" />
+  </root>
+  <root type="tpce.ConceptDeclaration" typeId="tpce.1071489090640" id="5923081993706260389" nodeInfo="ig">
+    <property name="name" nameId="tpck.1169194664001" value="TopThinArrowRight" />
+    <property name="conceptAlias" nameId="tpce.5092175715804935370" value="-//" />
+    <property name="virtualPackage" nameId="tpck.1193676396447" value="transition.toparrows" />
+    <link role="extends" roleId="tpce.1071489389519" targetNodeId="5923081993706050535" resolveInfo="Transition" />
+  </root>
+  <root type="tpce.ConceptDeclaration" typeId="tpce.1071489090640" id="5923081993706260390" nodeInfo="ig">
+    <property name="name" nameId="tpck.1169194664001" value="TopThinDottedArrowLeft" />
+    <property name="conceptAlias" nameId="tpce.5092175715804935370" value="//--" />
+    <property name="virtualPackage" nameId="tpck.1193676396447" value="transition.toparrows" />
+    <link role="extends" roleId="tpce.1071489389519" targetNodeId="5923081993706050535" resolveInfo="Transition" />
+  </root>
+  <root type="tpce.ConceptDeclaration" typeId="tpce.1071489090640" id="5923081993706260391" nodeInfo="ig">
+    <property name="name" nameId="tpck.1169194664001" value="TopThinDottedArrowRight" />
+    <property name="conceptAlias" nameId="tpce.5092175715804935370" value="--//" />
+    <property name="virtualPackage" nameId="tpck.1193676396447" value="transition.toparrows" />
+    <link role="extends" roleId="tpce.1071489389519" targetNodeId="5923081993706050535" resolveInfo="Transition" />
   </root>
 </model>
 
