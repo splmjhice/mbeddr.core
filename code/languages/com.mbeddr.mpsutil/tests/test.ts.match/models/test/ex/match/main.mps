@@ -4,17 +4,21 @@
   <language namespace="63e0e566-5131-447e-90e3-12ea330e1a00(com.mbeddr.mpsutil.blutil)" />
   <language namespace="f61473f9-130f-42f6-b98d-6c438812c2f6(jetbrains.mps.baseLanguage.unitTest)" />
   <language namespace="8585453e-6bfb-4d80-98de-b16074f1d86c(jetbrains.mps.lang.test)" />
+  <language namespace="bf9a5ab4-cde1-49e2-a1d7-fb6ce33c0d8d(com.mbeddr.mpsutil.plantuml.baselang)" />
+  <language namespace="4d23695e-1a42-422a-8a99-f296de2f7355(com.mbeddr.mpsutil.planuml.lang)" />
   <devkit namespace="fbc25dd2-5da4-483a-8b19-70928e1b62d7(jetbrains.mps.devkit.general-purpose)" />
-  <import index="tpee" modelUID="r:00000000-0000-4000-0000-011c895902ca(jetbrains.mps.baseLanguage.structure)" version="4" />
+  <import index="tpee" modelUID="r:00000000-0000-4000-0000-011c895902ca(jetbrains.mps.baseLanguage.structure)" version="5" />
   <import index="e2lb" modelUID="f:java_stub#6354ebe7-c22a-4a0f-ac54-50b52ab9b065#java.lang(JDK/java.lang@java_stub)" version="-1" />
   <import index="tp25" modelUID="r:00000000-0000-4000-0000-011c89590301(jetbrains.mps.lang.smodel.structure)" version="16" implicit="yes" />
   <import index="hba4" modelUID="r:f5bd2ad9-cd54-4408-b815-07f9f306f074(com.mbeddr.mpsutil.blutil.structure)" version="16" implicit="yes" />
   <import index="tpe3" modelUID="r:00000000-0000-4000-0000-011c895902d7(jetbrains.mps.baseLanguage.unitTest.structure)" version="-1" implicit="yes" />
-  <import index="tp5g" modelUID="r:00000000-0000-4000-0000-011c89590388(jetbrains.mps.lang.test.structure)" version="38" implicit="yes" />
+  <import index="tp5g" modelUID="r:00000000-0000-4000-0000-011c89590388(jetbrains.mps.lang.test.structure)" version="39" implicit="yes" />
   <import index="tp3r" modelUID="r:00000000-0000-4000-0000-011c8959034b(jetbrains.mps.lang.quotation.structure)" version="0" implicit="yes" />
   <import index="tp2q" modelUID="r:00000000-0000-4000-0000-011c8959032e(jetbrains.mps.baseLanguage.collections.structure)" version="7" implicit="yes" />
   <import index="tp2c" modelUID="r:00000000-0000-4000-0000-011c89590338(jetbrains.mps.baseLanguage.closures.structure)" version="3" implicit="yes" />
   <import index="tpck" modelUID="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" version="0" implicit="yes" />
+  <import index="jtwg" modelUID="r:fa2203ef-3a22-41de-a7d2-fe30d5256021(com.mbeddr.mpsutil.planuml.lang.structure)" version="3" implicit="yes" />
+  <import index="wl3d" modelUID="r:0cadce51-6a33-42a7-84fd-ef35f3ff220a(com.mbeddr.mpsutil.plantuml.baselang.structure)" version="-1" implicit="yes" />
   <root type="tp5g.NodesTestCase" typeId="tp5g.1216913645126" id="6385915233778742029" nodeInfo="ng">
     <property name="name" nameId="tpck.1169194664001" value="TestMatcher" />
     <node role="testMethods" roleId="tp5g.1217501895093" type="tp5g.SimpleNodeTest" typeId="tp5g.1225978065297" id="6385915233778742033" nodeInfo="ng">
@@ -1475,6 +1479,28 @@
             </node>
             <node role="actual" roleId="tpe3.8427750732757990725" type="tpee.StringLiteral" typeId="tpee.1070475926800" id="6534474553336474711" nodeInfo="nn">
               <property name="value" nameId="tpee.1070475926801" value="P" />
+            </node>
+          </node>
+          <node role="statement" roleId="tpee.1068581517665" type="tpee.Statement" typeId="tpee.1068580123157" id="5923081993706686428" nodeInfo="nn" />
+          <node role="statement" roleId="tpee.1068581517665" type="tpee.ExpressionStatement" typeId="tpee.1068580123155" id="5923081993706622266" nodeInfo="nn">
+            <node role="expression" roleId="tpee.1068580123156" type="wl3d.DiagramExpression" typeId="wl3d.5923081993706272929" id="5923081993706622260" nodeInfo="ng">
+              <node role="diagram" roleId="wl3d.5923081993706295496" type="jtwg.DiagramDefinition" typeId="jtwg.5923081993706295439" id="5923081993706622262" nodeInfo="ng">
+                <node role="type" roleId="jtwg.5923081993706295491" type="jtwg.SequenceDiagram" typeId="jtwg.5923081993706048799" id="5923081993706624472" nodeInfo="ng" />
+                <node role="content" roleId="jtwg.5923081993706295493" type="jtwg.Actor" typeId="jtwg.5049397430599272381" id="5923081993706645863" nodeInfo="ng">
+                  <property name="name" nameId="tpck.1169194664001" value="test" />
+                </node>
+                <node role="content" roleId="jtwg.5923081993706295493" type="jtwg.Actor" typeId="jtwg.5049397430599272381" id="5923081993706685377" nodeInfo="ng">
+                  <property name="name" nameId="tpck.1169194664001" value="dummy" />
+                </node>
+                <node role="content" roleId="jtwg.5923081993706295493" type="jtwg.NormalDottedArrowRight" typeId="jtwg.5923081993706252962" id="5923081993706685901" nodeInfo="ng">
+                  <node role="source" roleId="jtwg.5923081993706246285" type="jtwg.ParticipiantRef" typeId="jtwg.5923081993706246081" id="5923081993706686168" nodeInfo="ng">
+                    <link role="target" roleId="jtwg.5923081993706246082" targetNodeId="5923081993706645863" resolveInfo="test" />
+                  </node>
+                  <node role="target" roleId="jtwg.5923081993706246287" type="jtwg.ParticipiantRef" typeId="jtwg.5923081993706246081" id="5923081993706686426" nodeInfo="ng">
+                    <link role="target" roleId="jtwg.5923081993706246082" targetNodeId="5923081993706685377" resolveInfo="dummy" />
+                  </node>
+                </node>
+              </node>
             </node>
           </node>
         </node>

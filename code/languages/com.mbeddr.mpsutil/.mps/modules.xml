@@ -15,6 +15,7 @@
       <modulePath path="$PROJECT_DIR$/languages/com.mbeddr.mpsutil.interpreter/runtime/com.mbeddr.mpsutil.interpreter.runtime.msd" folder="" />
       <modulePath path="$PROJECT_DIR$/languages/com.mbeddr.mpsutil.langstats/langstats.mpl" folder="" />
       <modulePath path="$PROJECT_DIR$/languages/com.mbeddr.mpsutil.nodeviewer/com.mbeddr.mpsutil.nodeviewer.mpl" folder="" />
+      <modulePath path="$PROJECT_DIR$/languages/com.mbeddr.mpsutil.plantuml.baselang/com.mbeddr.mpsutil.plantuml.baselang.mpl" folder="plantuml" />
       <modulePath path="$PROJECT_DIR$/languages/com.mbeddr.mpsutil.plantuml.node/com.mbeddr.mpsutil.plantuml.node.mpl" folder="plantuml" />
       <modulePath path="$PROJECT_DIR$/languages/com.mbeddr.mpsutil.planuml.lang/com.mbeddr.mpsutil.planuml.lang.mpl" folder="plantuml" />
       <modulePath path="$PROJECT_DIR$/languages/com.mbeddr.mpsutil.refactoring/refactoring.mpl" folder="" />

@@ -11,6 +11,8 @@
   </dependencies>
   <usedLanguages>
     <usedLanguage>63e0e566-5131-447e-90e3-12ea330e1a00(com.mbeddr.mpsutil.blutil)</usedLanguage>
+    <usedLanguage>bf9a5ab4-cde1-49e2-a1d7-fb6ce33c0d8d(com.mbeddr.mpsutil.plantuml.baselang)</usedLanguage>
+    <usedLanguage>4d23695e-1a42-422a-8a99-f296de2f7355(com.mbeddr.mpsutil.planuml.lang)</usedLanguage>
     <usedLanguage>f61473f9-130f-42f6-b98d-6c438812c2f6(jetbrains.mps.baseLanguage.unitTest)</usedLanguage>
     <usedLanguage>8585453e-6bfb-4d80-98de-b16074f1d86c(jetbrains.mps.lang.test)</usedLanguage>
   </usedLanguages>

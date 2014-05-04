@@ -10,7 +10,7 @@
     <property name="name" nameId="tpck.1169194664001" value="Actor" />
     <property name="conceptAlias" nameId="tpce.5092175715804935370" value="actor" />
     <property name="virtualPackage" nameId="tpck.1193676396447" value="participant" />
-    <link role="extends" roleId="tpce.1071489389519" targetNodeId="5049397430599272434" resolveInfo="PlantUMLBaseConcept" />
+    <link role="extends" roleId="tpce.1071489389519" targetNodeId="5923081993706050538" resolveInfo="Participant" />
   </root>
   <root type="tpce.ConceptDeclaration" typeId="tpce.1071489090640" id="5049397430599272434" nodeInfo="ig">
     <property name="name" nameId="tpck.1169194664001" value="PlantUMLBaseConcept" />
@@ -67,25 +67,25 @@
     <property name="name" nameId="tpck.1169194664001" value="Boundary" />
     <property name="conceptAlias" nameId="tpce.5092175715804935370" value="boundary" />
     <property name="virtualPackage" nameId="tpck.1193676396447" value="participant" />
-    <link role="extends" roleId="tpce.1071489389519" targetNodeId="5049397430599272434" resolveInfo="PlantUMLBaseConcept" />
+    <link role="extends" roleId="tpce.1071489389519" targetNodeId="5923081993706050538" resolveInfo="Participant" />
   </root>
   <root type="tpce.ConceptDeclaration" typeId="tpce.1071489090640" id="5923081993706050427" nodeInfo="ig">
     <property name="name" nameId="tpck.1169194664001" value="Control" />
     <property name="conceptAlias" nameId="tpce.5092175715804935370" value="control" />
     <property name="virtualPackage" nameId="tpck.1193676396447" value="participant" />
-    <link role="extends" roleId="tpce.1071489389519" targetNodeId="5049397430599272434" resolveInfo="PlantUMLBaseConcept" />
+    <link role="extends" roleId="tpce.1071489389519" targetNodeId="5923081993706050538" resolveInfo="Participant" />
   </root>
   <root type="tpce.ConceptDeclaration" typeId="tpce.1071489090640" id="5923081993706050441" nodeInfo="ig">
     <property name="name" nameId="tpck.1169194664001" value="Entity" />
     <property name="conceptAlias" nameId="tpce.5092175715804935370" value="entity" />
     <property name="virtualPackage" nameId="tpck.1193676396447" value="participant" />
-    <link role="extends" roleId="tpce.1071489389519" targetNodeId="5049397430599272434" resolveInfo="PlantUMLBaseConcept" />
+    <link role="extends" roleId="tpce.1071489389519" targetNodeId="5923081993706050538" resolveInfo="Participant" />
   </root>
   <root type="tpce.ConceptDeclaration" typeId="tpce.1071489090640" id="5923081993706050470" nodeInfo="ig">
     <property name="name" nameId="tpck.1169194664001" value="Database" />
     <property name="conceptAlias" nameId="tpce.5092175715804935370" value="database" />
     <property name="virtualPackage" nameId="tpck.1193676396447" value="participant" />
-    <link role="extends" roleId="tpce.1071489389519" targetNodeId="5049397430599272434" resolveInfo="PlantUMLBaseConcept" />
+    <link role="extends" roleId="tpce.1071489389519" targetNodeId="5923081993706050538" resolveInfo="Participant" />
   </root>
   <root type="tpce.ConceptDeclaration" typeId="tpce.1071489090640" id="5923081993706050501" nodeInfo="ig">
     <property name="name" nameId="tpck.1169194664001" value="NormalArrowRight" />
@@ -115,6 +115,14 @@
       <property name="role" nameId="tpce.1071599776563" value="target" />
       <property name="sourceCardinality" nameId="tpce.1071599893252" value="1" />
       <link role="target" roleId="tpce.1071599976176" targetNodeId="5923081993706246081" resolveInfo="ParticipiantRef" />
+    </node>
+    <node role="propertyDeclaration" roleId="tpce.1071489727084" type="tpce.PropertyDeclaration" typeId="tpce.1071489288299" id="5923081993706260738" nodeInfo="ig">
+      <property name="name" nameId="tpck.1169194664001" value="leftFinal" />
+      <link role="dataType" roleId="tpce.1082985295845" targetNodeId="tpck.1082983657063" resolveInfo="boolean" />
+    </node>
+    <node role="propertyDeclaration" roleId="tpce.1071489727084" type="tpce.PropertyDeclaration" typeId="tpce.1071489288299" id="5923081993706260786" nodeInfo="ig">
+      <property name="name" nameId="tpck.1169194664001" value="rightFinal" />
+      <link role="dataType" roleId="tpce.1082985295845" targetNodeId="tpck.1082983657063" resolveInfo="boolean" />
     </node>
   </root>
   <root type="tpce.ConceptDeclaration" typeId="tpce.1071489090640" id="5923081993706050538" nodeInfo="ig">
@@ -267,6 +275,22 @@
     <property name="conceptAlias" nameId="tpce.5092175715804935370" value="--\\" />
     <property name="virtualPackage" nameId="tpck.1193676396447" value="transition.buttomarrows" />
     <link role="extends" roleId="tpce.1071489389519" targetNodeId="5923081993706050535" resolveInfo="Transition" />
+  </root>
+  <root type="tpce.ConceptDeclaration" typeId="tpce.1071489090640" id="5923081993706295439" nodeInfo="ig">
+    <property name="name" nameId="tpck.1169194664001" value="DiagramDefinition" />
+    <link role="extends" roleId="tpce.1071489389519" targetNodeId="tpck.1133920641626" resolveInfo="BaseConcept" />
+    <node role="linkDeclaration" roleId="tpce.1071489727083" type="tpce.LinkDeclaration" typeId="tpce.1071489288298" id="5923081993706295491" nodeInfo="ig">
+      <property name="metaClass" nameId="tpce.1071599937831" value="aggregation" />
+      <property name="role" nameId="tpce.1071599776563" value="type" />
+      <property name="sourceCardinality" nameId="tpce.1071599893252" value="1" />
+      <link role="target" roleId="tpce.1071599976176" targetNodeId="5923081993706039490" resolveInfo="PlantUMLDiagram" />
+    </node>
+    <node role="linkDeclaration" roleId="tpce.1071489727083" type="tpce.LinkDeclaration" typeId="tpce.1071489288298" id="5923081993706295493" nodeInfo="ig">
+      <property name="metaClass" nameId="tpce.1071599937831" value="aggregation" />
+      <property name="role" nameId="tpce.1071599776563" value="content" />
+      <property name="sourceCardinality" nameId="tpce.1071599893252" value="0..n" />
+      <link role="target" roleId="tpce.1071599976176" targetNodeId="5049397430599272434" resolveInfo="PlantUMLBaseConcept" />
+    </node>
   </root>
 </model>
 
