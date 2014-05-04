@@ -24,5 +24,17 @@
     </dependencies>
     <rename id="jtwg.5923081993706252963" type="CONCEPT" from="NormalArrowLeft" to="TopArrowLeft" />
   </StructureModification>
+  <StructureModification>
+    <dependencies>
+      <model index="jtwg" modelUID="r:fa2203ef-3a22-41de-a7d2-fe30d5256021(com.mbeddr.mpsutil.planuml.lang.structure)" version="3" />
+    </dependencies>
+    <rename id="jtwg.5923081993706246081" type="CONCEPT" from="ParticipiantRef" to="EntityRef" />
+  </StructureModification>
+  <StructureModification>
+    <dependencies>
+      <model index="jtwg" modelUID="r:fa2203ef-3a22-41de-a7d2-fe30d5256021(com.mbeddr.mpsutil.planuml.lang.structure)" version="4" />
+    </dependencies>
+    <rename id="jtwg.5923081993706246081" type="CONCEPT" from="EntityRef" to="DiagramEntityRef" />
+  </StructureModification>
 </history>
 

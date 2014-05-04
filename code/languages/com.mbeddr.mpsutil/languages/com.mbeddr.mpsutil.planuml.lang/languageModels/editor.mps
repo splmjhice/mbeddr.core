@@ -3,14 +3,14 @@
   <persistence version="8" />
   <language namespace="18bc6592-03a6-4e29-a83a-7ff23bde13ba(jetbrains.mps.lang.editor)" />
   <devkit namespace="fbc25dd2-5da4-483a-8b19-70928e1b62d7(jetbrains.mps.devkit.general-purpose)" />
-  <import index="jtwg" modelUID="r:fa2203ef-3a22-41de-a7d2-fe30d5256021(com.mbeddr.mpsutil.planuml.lang.structure)" version="3" />
+  <import index="jtwg" modelUID="r:fa2203ef-3a22-41de-a7d2-fe30d5256021(com.mbeddr.mpsutil.planuml.lang.structure)" version="5" />
   <import index="tpco" modelUID="r:00000000-0000-4000-0000-011c89590284(jetbrains.mps.lang.core.editor)" version="-1" />
   <import index="tpc2" modelUID="r:00000000-0000-4000-0000-011c8959029e(jetbrains.mps.lang.editor.structure)" version="35" implicit="yes" />
   <import index="tpck" modelUID="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" version="0" implicit="yes" />
   <import index="tpee" modelUID="r:00000000-0000-4000-0000-011c895902ca(jetbrains.mps.baseLanguage.structure)" version="5" implicit="yes" />
   <import index="tp25" modelUID="r:00000000-0000-4000-0000-011c89590301(jetbrains.mps.lang.smodel.structure)" version="16" implicit="yes" />
   <root type="tpc2.ConceptEditorDeclaration" typeId="tpc2.1071666914219" id="5923081993706050609" nodeInfo="ng">
-    <property name="virtualPackage" nameId="tpck.1193676396447" value="transition" />
+    <property name="virtualPackage" nameId="tpck.1193676396447" value="sequence.transition" />
     <link role="conceptDeclaration" roleId="tpc2.1166049300910" targetNodeId="jtwg.5923081993706050535" resolveInfo="Transition" />
     <node role="cellModel" roleId="tpc2.1080736633877" type="tpc2.CellModel_Collection" typeId="tpc2.1073389446423" id="5923081993706060617" nodeInfo="nn">
       <node role="childCellModel" roleId="tpc2.1073389446424" type="tpc2.CellModel_RefNode" typeId="tpc2.1073389882823" id="5923081993706247852" nodeInfo="ng">
@@ -62,8 +62,8 @@
     </node>
   </root>
   <root type="tpc2.ConceptEditorDeclaration" typeId="tpc2.1071666914219" id="5923081993706247961" nodeInfo="ng">
-    <property name="virtualPackage" nameId="tpck.1193676396447" value="participant" />
-    <link role="conceptDeclaration" roleId="tpc2.1166049300910" targetNodeId="jtwg.5923081993706246081" resolveInfo="ParticipiantRef" />
+    <property name="virtualPackage" nameId="tpck.1193676396447" value="" />
+    <link role="conceptDeclaration" roleId="tpc2.1166049300910" targetNodeId="jtwg.5923081993706246081" resolveInfo="DiagramEntityRef" />
     <node role="cellModel" roleId="tpc2.1080736633877" type="tpc2.CellModel_RefCell" typeId="tpc2.1088013125922" id="5923081993706247963" nodeInfo="ng">
       <link role="relationDeclaration" roleId="tpc2.1140103550593" targetNodeId="jtwg.5923081993706246082" />
       <node role="editorComponent" roleId="tpc2.1088186146602" type="tpc2.InlineEditorComponent" typeId="tpc2.1088185857835" id="5923081993706247964" nodeInfo="ng">
@@ -133,22 +133,21 @@
       </node>
     </node>
   </root>
-  <root type="tpc2.ConceptEditorDeclaration" typeId="tpc2.1071666914219" id="5923081993706625814" nodeInfo="ng">
-    <property name="virtualPackage" nameId="tpck.1193676396447" value="participant" />
-    <link role="conceptDeclaration" roleId="tpc2.1166049300910" targetNodeId="jtwg.5923081993706050538" resolveInfo="Participant" />
-    <node role="cellModel" roleId="tpc2.1080736633877" type="tpc2.CellModel_Collection" typeId="tpc2.1073389446423" id="5923081993706625816" nodeInfo="nn">
-      <node role="childCellModel" roleId="tpc2.1073389446424" type="tpc2.CellModel_Component" typeId="tpc2.1078939183254" id="5923081993706625823" nodeInfo="ng">
-        <link role="editorComponent" roleId="tpc2.1078939183255" targetNodeId="tpco.2900100530630621651" resolveInfo="alias" />
-      </node>
-      <node role="childCellModel" roleId="tpc2.1073389446424" type="tpc2.CellModel_Property" typeId="tpc2.1073389658414" id="5923081993706625828" nodeInfo="ng">
-        <link role="relationDeclaration" roleId="tpc2.1140103550593" targetNodeId="tpck.1169194664001" resolveInfo="name" />
-      </node>
-      <node role="cellLayout" roleId="tpc2.1106270802874" type="tpc2.CellLayout_Horizontal" typeId="tpc2.1106270549637" id="5923081993706625819" nodeInfo="nn" />
-    </node>
-  </root>
   <root type="tpc2.ConceptEditorDeclaration" typeId="tpc2.1071666914219" id="5923081993706747762" nodeInfo="ng">
     <link role="conceptDeclaration" roleId="tpc2.1166049300910" targetNodeId="jtwg.5923081993706747613" resolveInfo="EmptyDiagramContent" />
     <node role="cellModel" roleId="tpc2.1080736633877" type="tpc2.CellModel_Constant" typeId="tpc2.1073389577006" id="5923081993706747764" nodeInfo="nn" />
+  </root>
+  <root type="tpc2.ConceptEditorDeclaration" typeId="tpc2.1071666914219" id="5923081993706876216" nodeInfo="ng">
+    <link role="conceptDeclaration" roleId="tpc2.1166049300910" targetNodeId="jtwg.5923081993706815360" resolveInfo="DiagramEntity" />
+    <node role="cellModel" roleId="tpc2.1080736633877" type="tpc2.CellModel_Collection" typeId="tpc2.1073389446423" id="5923081993706876234" nodeInfo="nn">
+      <node role="childCellModel" roleId="tpc2.1073389446424" type="tpc2.CellModel_Component" typeId="tpc2.1078939183254" id="5923081993706876235" nodeInfo="ng">
+        <link role="editorComponent" roleId="tpc2.1078939183255" targetNodeId="tpco.2900100530630621651" resolveInfo="alias" />
+      </node>
+      <node role="childCellModel" roleId="tpc2.1073389446424" type="tpc2.CellModel_Property" typeId="tpc2.1073389658414" id="5923081993706876236" nodeInfo="ng">
+        <link role="relationDeclaration" roleId="tpc2.1140103550593" targetNodeId="tpck.1169194664001" resolveInfo="name" />
+      </node>
+      <node role="cellLayout" roleId="tpc2.1106270802874" type="tpc2.CellLayout_Horizontal" typeId="tpc2.1106270549637" id="5923081993706876237" nodeInfo="nn" />
+    </node>
   </root>
 </model>
 
