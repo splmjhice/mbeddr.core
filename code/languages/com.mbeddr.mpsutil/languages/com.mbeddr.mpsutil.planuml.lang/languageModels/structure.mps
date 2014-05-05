@@ -295,6 +295,7 @@
   </root>
   <root type="tpce.ConceptDeclaration" typeId="tpce.1071489090640" id="5923081993706815359" nodeInfo="ig">
     <property name="name" nameId="tpck.1169194664001" value="Class" />
+    <property name="conceptAlias" nameId="tpce.5092175715804935370" value="class" />
     <link role="extends" roleId="tpce.1071489389519" targetNodeId="5923081993706815360" resolveInfo="DiagramEntity" />
   </root>
   <root type="tpce.ConceptDeclaration" typeId="tpce.1071489090640" id="5923081993706815360" nodeInfo="ig">

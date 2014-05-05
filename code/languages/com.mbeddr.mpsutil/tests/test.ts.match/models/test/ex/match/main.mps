@@ -17,7 +17,7 @@
   <import index="tp2q" modelUID="r:00000000-0000-4000-0000-011c8959032e(jetbrains.mps.baseLanguage.collections.structure)" version="7" implicit="yes" />
   <import index="tp2c" modelUID="r:00000000-0000-4000-0000-011c89590338(jetbrains.mps.baseLanguage.closures.structure)" version="3" implicit="yes" />
   <import index="tpck" modelUID="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" version="0" implicit="yes" />
-  <import index="jtwg" modelUID="r:fa2203ef-3a22-41de-a7d2-fe30d5256021(com.mbeddr.mpsutil.planuml.lang.structure)" version="3" implicit="yes" />
+  <import index="jtwg" modelUID="r:fa2203ef-3a22-41de-a7d2-fe30d5256021(com.mbeddr.mpsutil.planuml.lang.structure)" version="5" implicit="yes" />
   <import index="wl3d" modelUID="r:0cadce51-6a33-42a7-84fd-ef35f3ff220a(com.mbeddr.mpsutil.plantuml.baselang.structure)" version="-1" implicit="yes" />
   <root type="tp5g.NodesTestCase" typeId="tp5g.1216913645126" id="6385915233778742029" nodeInfo="ng">
     <property name="name" nameId="tpck.1169194664001" value="TestMatcher" />
@@ -1493,10 +1493,10 @@
                   <property name="name" nameId="tpck.1169194664001" value="dummy" />
                 </node>
                 <node role="content" roleId="jtwg.5923081993706295493" type="jtwg.NormalDottedArrowRight" typeId="jtwg.5923081993706252962" id="5923081993706685901" nodeInfo="ng">
-                  <node role="source" roleId="jtwg.5923081993706246285" type="jtwg.ParticipiantRef" typeId="jtwg.5923081993706246081" id="5923081993706686168" nodeInfo="ng">
+                  <node role="source" roleId="jtwg.5923081993706246285" type="jtwg.DiagramEntityRef" typeId="jtwg.5923081993706246081" id="5923081993706686168" nodeInfo="ng">
                     <link role="target" roleId="jtwg.5923081993706246082" targetNodeId="5923081993706645863" resolveInfo="test" />
                   </node>
-                  <node role="target" roleId="jtwg.5923081993706246287" type="jtwg.ParticipiantRef" typeId="jtwg.5923081993706246081" id="5923081993706686426" nodeInfo="ng">
+                  <node role="target" roleId="jtwg.5923081993706246287" type="jtwg.DiagramEntityRef" typeId="jtwg.5923081993706246081" id="5923081993706686426" nodeInfo="ng">
                     <link role="target" roleId="jtwg.5923081993706246082" targetNodeId="5923081993706685377" resolveInfo="dummy" />
                   </node>
                 </node>
