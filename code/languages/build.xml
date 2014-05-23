@@ -1,4 +1,4 @@
-  <project name="mbeddr download and deploy plugins" default="build-online" >
+  <project name="mbeddr download and deploy plugins" default="build-online" xmlns:ivy="antlib:org.apache.ivy.ant">
 	
   <property file="build.properties"/>  
   <taskdef name="make-tests" classname="com.mbeddr.tools.ant.MakeTestsTask" classpath="${mbeddr.github.core.home}/tools/ant/tasks/MakeTestsTask.jar" />
