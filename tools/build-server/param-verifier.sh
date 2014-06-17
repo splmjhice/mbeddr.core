@@ -5,11 +5,9 @@
 # Updated by James Hice, 17 June, 2014
 #
 # planned changes:
-# - add implementation of a flag for parameters to ignore
-# - ignored parameters should be able to take in 
-#     multiple values
-# - if neither parameters to check or ignore are provieded then the script 
-#     should check for all the parameters that are on the base path
+# - implement function which checks for all parameters from the search path
+# - if neither parameters to check or ignore are provided then the script 
+#     should check for all the parameters that are on the search path
 #
 #
 
@@ -22,7 +20,7 @@ SEARCH_PATH=/usr/share/tomcat7/.BuildServer/config/projects
 EXITCODE=0
 tmp=''
 
-
+# Usage funtion, used to let the user know how to use the program
 Usage(){
      cat <<EOF
 Usage: ${0##*/} [ options ] <<ARGUMENTS>>
@@ -57,16 +55,29 @@ Options:
   -p| search path
 
 Example:
-${0##*/} -p /usr/share/tomcat7/.BuildServer/config/projects -i "ignore-this-param" 
+${0##*/} -p /usr/share/tomcat7/.BuildServer/config/projects -c "check these parameters" -i "ignore these parameters"
+(this example would end up only checking for the parameter 'check') 
 EOF
 }
 
+# not yet completed
+# used to find all the parameters possible starting in the search path
 FindParams(){
 # find parameters minus and that are to be ignored
 # grep through the search path folder and find the parameters 
 # and add them to the toCheckParams array unless they are in the 
 # toIgnoreParams array
 echo FindParams
+}
+
+PullIgnoredParams(){
+# iterate through the ignore parameters and
+# remove them from the parameters to check
+
+IFS=' ' read -ra IGNOREP <<< "$toIgnoreParams"
+for PARAM in "${IGNOREP[@]}"; do
+    toCheckParams=$(echo $toCheckParams| sed "s/$PARAM//g")
+done
 }
 
 CheckParam(){
@@ -82,13 +93,11 @@ for PARAM in "${PARAMS[@]}"; do
    cat <<EOF
 ####################################
 EOF
+
 if [ $TEMPCODE != 0 ]; then 
    EXITCODE=1
 fi
 done
-
-###grep name=\"$PARAM $SEARCH_PATH/* -R|awk '/.xml:/&&/param/{print}'|awk '{print }'
-###EXITCODE=`grep name=\"$PARAM $SEARCH_PATH/* -R|awk '/.xml:/&&/param/{print}'|awk 'END{print NR-1}'`
 }
 
 CheckPath(){
@@ -119,11 +128,9 @@ while getopts ":c:hi:p:" opt; do
      Usage
       ;;
     i)
-      echo "-i was triggered! with $OPTARG" >&2 
       toIgnoreParams=$OPTARG
      ;;
     p)
-      echo "-p was triggered! with $OPTARG " >&2
       SEARCH_PATH=$OPTARG
       echo "Search Path is $SEARCH_PATH"
       ;;
@@ -139,8 +146,9 @@ done
 
 # if the parameters to check variable has been assigned a value, 
 # proceed with checking for that/those parameter(s)
-if [ ! -z "$toCheckParams" ] ; then 
+if [ ! -z "$toCheckParams" ] ; then      
      CheckPath
+     PullIgnoredParams
      CheckParam
 else
      echo "no pararmeter to check option used, please follow the usage instructions:"
