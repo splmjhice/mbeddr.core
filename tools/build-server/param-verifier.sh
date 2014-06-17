@@ -138,7 +138,7 @@ while getopts ":c:hi:p:" opt; do
   esac
 done
 
-if [ $toCheckParams != "" ] ; then 
+if [ ! -z "$toCheckParams" ] ; then 
      CheckPath
      CheckParam
 else
