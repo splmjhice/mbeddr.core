@@ -2,16 +2,14 @@
 #
 # Initially written by James Hice on 23 May, 2014
 #
-# Updated by James Hice, 11 June, 2014
+# Updated by James Hice, 17 June, 2014
 #
 # planned changes:
-# - add flags for options for parameters to check, parameters to ignore,
-#     search path, help
-# - use the parameters to search for the parameters
-# - ignored parameters and parameters to check should be able to take in 
+# - add implementation of a flag for parameters to ignore
+# - ignored parameters should be able to take in 
 #     multiple values
 # - if neither parameters to check or ignore are provieded then the script 
-#     should check for all the parameters that are on the base level
+#     should check for all the parameters that are on the base path
 #
 #
 
@@ -42,7 +40,7 @@ Usage: ${0##*/} [ options ] <<ARGUMENTS>>
  The script uses a path and list of param arguments and can be run from
  the command line or from within TeamCity
 
- -c option is for a list of parameters to check - implementation in progress
+ -c option is for a list of parameters to check
 
  -h option should show this usage help
 
@@ -111,6 +109,7 @@ exit $EXITCODE
 ## from the command line you can use "echo $?" to show the exit code from the previously used program
 }
 
+# use the command like options to control the flow of the program
 while getopts ":c:hi:p:" opt; do 
     case $opt in
     c) 
@@ -138,11 +137,13 @@ while getopts ":c:hi:p:" opt; do
   esac
 done
 
+# if the parameters to check variable has been assigned a value, 
+# proceed with checking for that/those parameter(s)
 if [ ! -z "$toCheckParams" ] ; then 
      CheckPath
      CheckParam
 else
-     echo "no options used, please follow the usage instructions:"
+     echo "no pararmeter to check option used, please follow the usage instructions:"
      Usage
      EXITCODE=-3
 fi
