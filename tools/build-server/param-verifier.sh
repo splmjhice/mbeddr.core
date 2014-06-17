@@ -68,6 +68,7 @@ FindParams(){
 # grep through the search path folder and find the parameters 
 # and add them to the toCheckParams array unless they are in the 
 # toIgnoreParams array
+echo FindParams
 }
 
 CheckParam(){
