@@ -4498,7 +4498,7 @@
     </node>
   </root>
   <root type="tp5g.NodesTestCase" typeId="tp5g.1216913645126" id="8022057952244688456" nodeInfo="ng">
-    <property name="name" nameId="tpck.1169194664001" value="Poitners" />
+    <property name="name" nameId="tpck.1169194664001" value="Pointers" />
     <node role="testMethods" roleId="tp5g.1217501895093" type="tp5g.SimpleNodeTest" typeId="tp5g.1225978065297" id="8022057952244688457" nodeInfo="ng">
       <property name="name" nameId="tpck.1169194664001" value="testSimplePointers" />
       <node role="returnType" roleId="tpee.1068580123133" type="tpee.VoidType" typeId="tpee.1068581517677" id="8022057952244688458" nodeInfo="in" />
@@ -4561,7 +4561,7 @@
           </node>
           <node role="states" roleId="o23b.4791280061046137595" type="o23b.CBMCCounterexampleStateTest" typeId="o23b.4791280061046124023" id="8022057952244688481" nodeInfo="ng">
             <property name="nodeKind" nameId="o23b.4791280061046124024" value="size" />
-            <property name="nodeValue" nameId="o23b.4791280061046139065" value="4" />
+            <property name="nodeValue" nameId="o23b.4791280061046139065" value="*" />
             <node role="node" roleId="o23b.4791280061046189368" type="tp25.SNodeType" typeId="tp25.1138055754698" id="8022057952244688482" nodeInfo="in">
               <link role="concept" roleId="tp25.1138405853777" targetNodeId="c4fa.4185783222026475238" resolveInfo="LocalVariableDeclaration" />
             </node>
