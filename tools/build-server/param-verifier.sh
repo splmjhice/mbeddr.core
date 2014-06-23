@@ -165,9 +165,13 @@ if [ ! -z "$toCheckParams" ] ; then
      PullIgnoredParams
      CheckParam
 else
-     echo "no pararmeter to check option used, please follow the usage instructions:"
-     Usage
-     EXITCODE=-3
+     FindParams
+     CheckPath
+     PullIgnoredParams
+     CheckParam
+#     echo "no pararmeter to check option used, please follow the usage instructions:"
+#     Usage
+#     EXITCODE=-3
 fi
 
 EXITNOW
