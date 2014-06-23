@@ -73,8 +73,8 @@ FindParams(){
 FILE_ARRAY=($(find $SEARCH_PATH -type f|grep -v xml. |grep .xml|awk '{ system("grep -H \<project\>  " $0 )}'|awk '{ print substr($1,1,length($1)-10)}') )
 for file in ${FILE_ARRAY[@]}
   do
-   ParamsFound=($(xgrep -x '/project/parameters/param' $file |awk '/param\ name/' - |awk 'BEGIN{ FS="\""}; { print $2}') )
-
+   ParamsFoundTemp=($(xgrep -x '/project/parameters/param' $file |awk '/param\ name/' - |awk 'BEGIN{ FS="\""}; { print $2}') )
+   ParamsFound=("${ParamsFound[@]}"  "${ParamsFoundTemp[@]}")
   done
 for x in "${ParamsFound[@]}"; do
 echo $x
