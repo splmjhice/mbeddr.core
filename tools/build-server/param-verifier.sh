@@ -15,6 +15,7 @@
 PARAM=""
 toCheckParams=""
 toIgnoreParams="" 
+ParamsFound=""
 # use the current default Teamcity path as a default
 SEARCH_PATH=/usr/share/tomcat7/.BuildServer/config/projects
 EXITCODE=0
@@ -63,17 +64,27 @@ EOF
 # not yet completed
 # used to find all the parameters possible starting in the search path
 FindParams(){
-# find parameters minus and that are to be ignored
-# grep through the search path folder and find the parameters 
-# and add them to the toCheckParams array unless they are in the 
-# toIgnoreParams array
-echo FindParams
+# find all parameters
+# finds all <param > variables in <project><parameters> structure 
+# and adds the names to the ParamsFound variable
+
+#SEARCH_PATHu=/usr/share/tomcat7/.BuildServer/config/projects
+
+FILE_ARRAY=($(find $SEARCH_PATH -type f|grep -v xml. |grep .xml|awk '{ system("grep -H \<project\>  " $0 )}'|awk '{ print substr($1,1,length($1)-10)}') )
+for file in ${FILE_ARRAY[@]}
+  do
+   ParamsFound=($(xgrep -x '/project/parameters/param' $file |awk '/param\ name/' - |awk 'BEGIN{ FS="\""}; { print $2}') )
+
+  done
+
+echo "FindParams done"
 }
 
 PullIgnoredParams(){
+# combine toCheckParams and ParamsFound
 # iterate through the ignore parameters and
 # remove them from the parameters to check
-
+#$toCheckParams=$(IFS=$'\n' (`for PARAM in "${toCheckParams[@]}" "${ParamsFound[@]}" ; do echo "$PARAM" ; done | sort -du`))
 IFS=' ' read -ra IGNOREP <<< "$toIgnoreParams"
 for PARAM in "${IGNOREP[@]}"; do
     toCheckParams=$(echo $toCheckParams| sed "s/$PARAM//g")
