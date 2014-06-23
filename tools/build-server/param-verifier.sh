@@ -77,7 +77,7 @@ for file in ${FILE_ARRAY[@]}
 
   done
 for x in ParamsFound; do
-echo x
+echo $x
 done
 
 echo "FindParams done"
