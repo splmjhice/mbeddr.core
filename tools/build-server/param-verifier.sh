@@ -141,9 +141,11 @@ while getopts ":c:hi:p:" opt; do
       ;;
     i)
       toIgnoreParams=$OPTARG
+      FindParams
      ;;
     p)
       SEARCH_PATH=$OPTARG
+      FindParams
       echo "Search Path is $SEARCH_PATH"
       ;;
     \?)
