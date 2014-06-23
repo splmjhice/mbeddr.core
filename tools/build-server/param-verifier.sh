@@ -84,10 +84,9 @@ PullIgnoredParams(){
 # combine toCheckParams and ParamsFound
 # iterate through the ignore parameters and
 # remove them from the parameters to check
-OLDIFS="$IFS"
-IFS=$'\n'
-$toCheckParamsTemp=$(`echo "${toCheckParams[@]}" "${ParamsFound[@]}"| sort -du`)
-IFS="$OLDIFS"
+
+$toCheckParamsTemp=$("${toCheckParams[@]}" "${ParamsFound[@]}")
+
 IFS=' ' read -ra IGNOREP <<< "$toIgnoreParams"
 for PARAM in "${IGNOREP[@]}"; do
     toCheckParams=$(echo $toCheckParams| sed "s/$PARAM//g")
