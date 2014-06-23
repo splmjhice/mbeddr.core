@@ -108,8 +108,6 @@ CheckParam(){
 #PARAM=$1  
 TEMPCODE=0
 if [ ! -z "$toCheckParams" ] ; then
-toCheckParams=$ParamsFound
-fi
 
 ## search for the parameter on the path, only print the lines of the .xml files 
 ## ue the number of instances over the 1 expected as the exit code
@@ -121,10 +119,27 @@ for PARAM in "${PARAMS[@]}"; do
 ####################################
 EOF
 
-if [ $TEMPCODE != 0 ]; then 
+if [ $TEMPCODE != 0 ]; then
    EXITCODE=1
 fi
 done
+
+else
+#IFS=' ' read -ra PARAMS <<< "$toCheckParams"
+for PARAM in "${ParamsFound[@]}"; do
+   grep name=\"$PARAM $SEARCH_PATH/* -R|awk '/.xml:/&&/param/{print}'|awk '{print }'
+   TEMPCODE=`grep name=\"$PARAM $SEARCH_PATH/* -R|awk '/.xml:/&&/param/{print}'|awk 'END{print NR-1}'`
+   cat <<EOF
+####################################
+EOF
+
+if [ $TEMPCODE != 0 ]; then
+   EXITCODE=1
+fi
+done
+
+fi
+
 }
 
 CheckPath(){
