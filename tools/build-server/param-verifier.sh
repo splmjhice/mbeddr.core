@@ -76,7 +76,7 @@ for file in ${FILE_ARRAY[@]}
    ParamsFound=($(xgrep -x '/project/parameters/param' $file |awk '/param\ name/' - |awk 'BEGIN{ FS="\""}; { print $2}') )
 
   done
-for x in "${ParamsFound[@]"}; do
+for x in "${ParamsFound[@]}"; do
 echo $x
 done
 
