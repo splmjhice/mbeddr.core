@@ -86,7 +86,7 @@ PullIgnoredParams(){
 # remove them from the parameters to check
 OLDIFS="$IFS"
 IFS=$'\n'
-$toCheckParams=$(`for PARAM in "${toCheckParams[@]}" "${ParamsFound[@]}" ; do echo "$PARAM" ; done | sort -du`)
+$toCheckParamsTemp=$(`echo "${toCheckParams[@]}" "${ParamsFound[@]}"| sort -du`)
 IFS="$OLDIFS"
 IFS=' ' read -ra IGNOREP <<< "$toIgnoreParams"
 for PARAM in "${IGNOREP[@]}"; do
