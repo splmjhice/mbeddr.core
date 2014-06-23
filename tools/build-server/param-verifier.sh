@@ -68,7 +68,7 @@ FindParams(){
 # finds all <param > variables in <project><parameters> structure 
 # and adds the names to the ParamsFound variable
 
-#SEARCH_PATHu=/usr/share/tomcat7/.BuildServer/config/projects
+#SEARCH_PATH=/usr/share/tomcat7/.BuildServer/config/projects
 
 FILE_ARRAY=($(find $SEARCH_PATH -type f|grep -v xml. |grep .xml|awk '{ system("grep -H \<project\>  " $0 )}'|awk '{ print substr($1,1,length($1)-10)}') )
 for file in ${FILE_ARRAY[@]}
@@ -76,6 +76,9 @@ for file in ${FILE_ARRAY[@]}
    ParamsFound=($(xgrep -x '/project/parameters/param' $file |awk '/param\ name/' - |awk 'BEGIN{ FS="\""}; { print $2}') )
 
   done
+for x in ParamsFound; do
+echo x
+done
 
 echo "FindParams done"
 }
@@ -85,18 +88,29 @@ PullIgnoredParams(){
 # iterate through the ignore parameters and
 # remove them from the parameters to check
 
-$toCheckParamsTemp=$("${toCheckParams[@]}" "${ParamsFound[@]}")
+#toCheckParamsTemp=$("${toCheckParams[@]}" "${ParamsFound[@]}")
 
 IFS=' ' read -ra IGNOREP <<< "$toIgnoreParams"
+if [ ! -z "$toCheckParams" ] ; then
 for PARAM in "${IGNOREP[@]}"; do
     toCheckParams=$(echo $toCheckParams| sed "s/$PARAM//g")
 done
+else 
+for PARAM in "${IGNOREP[@]}"; do
+    toCheckParams=$(echo $ParamsFound| sed "s/$PARAM//g")
+done
+
+fi
 }
 
 CheckParam(){
 #$toCheckParams
 #PARAM=$1  
 TEMPCODE=0
+if [ ! -z "$toCheckParams" ] ; then
+toCheckParams=$ParamsFound
+fi
+
 ## search for the parameter on the path, only print the lines of the .xml files 
 ## ue the number of instances over the 1 expected as the exit code
 IFS=' ' read -ra PARAMS <<< "$toCheckParams"
