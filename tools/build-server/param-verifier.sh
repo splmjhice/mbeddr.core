@@ -16,6 +16,7 @@ PARAM=""
 toCheckParams=""
 toIgnoreParams="" 
 ParamsFound=""
+ParamsFoundList=""
 # use the current default Teamcity path as a default
 SEARCH_PATH=/usr/share/tomcat7/.BuildServer/config/projects
 EXITCODE=0
@@ -61,6 +62,9 @@ ${0##*/} -p /usr/share/tomcat7/.BuildServer/config/projects -c "check these para
 EOF
 }
 
+# http://stackoverflow.com/questions/1527049/bash-join-elements-of-an-array
+function join { local IFS="$1"; shift; echo "$*"; }  
+
 # not yet completed
 # used to find all the parameters possible starting in the search path
 FindParams(){
@@ -73,13 +77,24 @@ FindParams(){
 FILE_ARRAY=($(find $SEARCH_PATH -type f|grep -v xml. |grep .xml|awk '{ system("grep -H \<project\>  " $0 )}'|awk '{ print substr($1,1,length($1)-10)}') )
 for file in ${FILE_ARRAY[@]}
   do
+#   xgrep -x '/project/parameters/param' $file |awk '/param\ name/' - |awk 'BEGIN{ FS="\""}; { print $2}' 
    ParamsFoundTemp=($(xgrep -x '/project/parameters/param' $file |awk '/param\ name/' - |awk 'BEGIN{ FS="\""}; { print $2}') )
    ParamsFound=("${ParamsFound[@]}"  "${ParamsFoundTemp[@]}")
   done
-for x in "${ParamsFound[@]}"; do
-echo $x
-done
 
+ParamsFoundList=$(join \ "${ParamsFound[@]}")
+echo $ParamsFoundList
+
+### 
+##ParamsFoundList=$( IFS=$'\n'; echo "${ParamsFound[*]}" )
+##ParamsFoundList=${ParamsFound%?}
+##echo echoing the list:
+##for x in "${ParamsFoundList[@]}"; do
+##echo $x
+##done
+# $ var=$( IFS=$'\n'; echo "${System[*]}" )
+
+# var=${var%?} 
 echo "FindParams done"
 }
 
@@ -94,12 +109,16 @@ IFS=' ' read -ra IGNOREP <<< "$toIgnoreParams"
 if [ ! -z "$toCheckParams" ] ; then
 for PARAM in "${IGNOREP[@]}"; do
     toCheckParams=$(echo $toCheckParams| sed "s/$PARAM//g")
+    echo  removed elements from tocheckparams
 done
-else 
+#fi
+else
+#if [ ! -z "$ParamsFoundList" ] ; then
 for PARAM in "${IGNOREP[@]}"; do
-    toCheckParams=$(echo $ParamsFound| sed "s/$PARAM//g")
+     toCheckParams=$(echo $ParamsFoundList| sed "s/$PARAM//g")
+     echo removed elements from paramsfoundlist
+#    toCheckParams=(${$ParamsFound[@]//*$PARAM*})
 done
-
 fi
 }
 
@@ -126,7 +145,8 @@ done
 
 else
 #IFS=' ' read -ra PARAMS <<< "$toCheckParams"
-for PARAM in "${ParamsFound[@]}"; do
+IFS=' ' read -ra PARAMS <<< "$ParamsFoundList"
+for PARAM in "${PARAMS[@]}"; do
    grep name=\"$PARAM $SEARCH_PATH/* -R|awk '/.xml:/&&/param/{print}'|awk '{print }'
    TEMPCODE=`grep name=\"$PARAM $SEARCH_PATH/* -R|awk '/.xml:/&&/param/{print}'|awk 'END{print NR-1}'`
    cat <<EOF
@@ -197,6 +217,7 @@ if [ ! -z "$toCheckParams" ] ; then
 else
      FindParams
      CheckPath
+     
      PullIgnoredParams
      CheckParam
 #     echo "no pararmeter to check option used, please follow the usage instructions:"
@@ -205,3 +226,4 @@ else
 fi
 
 EXITNOW
+
