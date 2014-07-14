@@ -44,7 +44,7 @@ Usage: ${0##*/} [ options ] <<ARGUMENTS>>
 
  -h option should show this usage help
 
- -i option is for a list of parameters to ignore - not implemented yet
+ -i option is for a list of parameters to ignore
 
  -p option is for the path argument which is where the search start. 
     The search will be done recursively starting from this location
@@ -188,6 +188,7 @@ while getopts ":c:hi:p:" opt; do
      ;;
     h)
      Usage
+     EXITNOW
       ;;
     i)
       toIgnoreParams=$OPTARG
